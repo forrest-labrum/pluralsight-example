@@ -1,0 +1,53 @@
+<header class="header flex-row">
+  <a [routerLink]="['/']" class="logo"></a>
+  <input class="search" placeholder="What do you want to learn?" autocomplete="off">
+  <ul class="nav flex-row flex-center">
+    <li>
+      <a [routerLink]="['/']" class="expandable nav-link">Popular</a>
+      <div class="header-dropdown">
+        <div class="header-dropdown-important">
+          MOST POPULAR COURSES
+        </div>
+        <title-card-row [data]="languages"></title-card-row>
+        <div class="header-dropdown-important">
+          <a [routerLink]="['/']" class="button-trans">View all</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a [routerLink]="['/']" class="expandable nav-link">Courses</a>
+      <div class="header-dropdown">
+        <title-table [data]="rowTables[0]" color="#1e9dbd"></title-table>
+        <title-table [data]="rowTables[1]" color="#f9b61d"></title-table>
+        <title-table [data]="rowTables[2]" color="#df2228"></title-table>
+        <div class="flex-col flex">
+          <title-table [data]="colTables[0]" color="#8f479b"></title-table>
+          <title-table [data]="colTables[1]" color="#9cca4a"></title-table>
+          <title-table [data]="colTables[2]" color="#68c5b2"></title-table>
+          <title-table [data]="colTables[3]" color="#f04c53"></title-table>
+          <title-table [data]="colTables[4]" color="#29b363"></title-table>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a [routerLink]="['/']" class="expandable nav-link">Features</a>
+      <div class="header-dropdown">
+        <title-card-row [data]="features"></title-card-row>
+      </div>
+    </li>
+    <li>
+      <a [routerLink]="['/']" class="nav-link">Business</a>
+    </li>
+    <li>
+      <a [routerLink]="['/']" class="nav-link">Individuals</a>
+    </li>
+  </ul>
+  <div class="user-actions" *ngIf="!isLoggedIn">
+    <a [routerLink]="['/signin']">Sign in</a>
+    <a [routerLink]="['/pricing']" class="button">Sign up</a>
+  </div>
+  <div class="user-actions" *ngIf="isLoggedIn">
+    <span>Welcome, {{ firstName }}</span>
+    <a (click)="signOut()" class="button">Sign out</a>
+  </div>
+</header>

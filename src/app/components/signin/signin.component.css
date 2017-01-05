@@ -1,0 +1,25 @@
+.signin {
+  width: 303px;
+  flex-grow: 8;
+  padding-top: 8%;
+  max-width: 62.5rem;
+  font-size: .75rem;
+}
+
+img {
+  width: 303px;
+  margin-bottom: 40px;
+}
+
+a, a:hover, a:active, a:visited {
+    color: #127fc9;
+}
+
+.signin-links {
+  line-height: 2.0;
+}
+
+.footer {
+  align-items: flex-end;
+  margin-bottom: 5%;
+}

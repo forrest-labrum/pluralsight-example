@@ -1,0 +1,28 @@
+<full-window-container background="url(https://www.pluralsight.com/content/dam/pluralsight/images/learnerpage/homepage_hero.jpg) no-repeat center center/cover fixed" center>
+  <div class="flex-col flex-center container">
+    <div class="title padded">
+      Don't just keep up with technology.
+    </div>
+    <div class="title-lg">
+      Master it.
+    </div>
+    <div class="padded">
+      <a class="pointer" (click)="openYoutube()">
+        <img src="https://www.pluralsight.com/content/pluralsight/en/_jcr_content/main/generic_block_0/parsys/columns/column-parsys-1/column_control_2/column-parsys-1/image/image-res.img.png">
+      </a>
+    </div>
+    <div class="title-sm padded">
+      Welcome to Pluralsight. The on-demand technology learning platform you count on to stay relevant, with tools that measure your skills and solve your problems—faster.
+    </div>
+    <div class="flex-row">
+        <div class="flex-col flex padded">
+          <p>FOR BUSINESS</p>
+          <a [routerLink]="['signup']" class="button-lg button-hvr">Free team trial</a>
+        </div>
+        <div class="flex-col flex padded">
+          <p>FOR INDIVIDUALS</p>
+          <a [routerLink]="['signup']" class="button-lg button-hvr">Free trial</a>
+        </div>
+    </div>
+  </div>
+</full-window-container>

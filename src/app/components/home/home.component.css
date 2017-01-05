@@ -1,0 +1,16 @@
+:host {
+  background-image: url(https://www.pluralsight.com/content/dam/pluralsight/images/learnerpage/homepage_hero.jpg);
+}
+
+div {
+  color: white;
+  text-align: center;
+}
+
+.padded {
+  padding: 25px;
+}
+
+.pointer {
+  cursor: pointer;
+}

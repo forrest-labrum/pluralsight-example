@@ -1,0 +1,21 @@
+:host {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 15px;
+  background-color: rgb(54,54,54);
+  min-width: 125px;
+  min-height: 100px;
+}
+
+:host img {
+  width: 60px;
+  height: auto;
+}
+
+:host a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}

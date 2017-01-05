@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let d of data" [class.header]="d.header===true" class="table-row">
+    <a href="/">{{ d.label }}</a>
+  </li>
+</ul>

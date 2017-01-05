@@ -1,0 +1,30 @@
+<full-window-container center>
+  <div class="signin flex-col flex">
+    <img src="https://app.pluralsight.com/id/content/ps-logo-outline.png">
+    <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+      <div class="email">
+        <div *ngIf="f.submitted && !email.valid" class="warning">Email is required</div>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" [(ngModel)]="userData.email" #email="ngModel" required />
+      </div>
+      <div class="password">
+        <div *ngIf="f.submitted && !password.valid" class="warning">Password is required</div>
+        <label for="Password">Password</label>
+        <input type="password" name="password" [(ngModel)]="userData.password" #password="ngModel" required />
+      </div>
+      <div class="first-name">
+        <div *ngIf="f.submitted && !firstName.valid" class="warning">First Name is required</div>
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" [(ngModel)]="userData.firstName" #firstName="ngModel" required />
+      </div>
+      <div class="last-name">
+        <div *ngIf="f.submitted && !lastName.valid" class="warning">Last Name is required</div>
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" [(ngModel)]="userData.lastName" #lastName="ngModel" required />
+      </div>
+      <div class="actions flex-row">
+        <button type="submit" class="button-sm button-hvr flex">Create Account</button>
+      </div>
+    </form>
+  </div>
+</full-window-container>

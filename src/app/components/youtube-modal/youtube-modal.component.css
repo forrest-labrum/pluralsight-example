@@ -1,0 +1,10 @@
+.modal-container {
+  background-color: rgba(0,0,0,0.85);
+  padding: 8px;
+  border-radius: 10px;
+  height: 480px;
+  width: 853px;
+  position: fixed;
+  top: calc(50vh - 240px);
+  left: calc(50vw - 435px);
+}

@@ -1,0 +1,32 @@
+<full-window-container center>
+  <div class="signin flex-col flex">
+    <img src="https://app.pluralsight.com/id/content/ps-logo-outline.png">
+    <form name="form" (ngSubmit)="f.form.valid && signIn()" #f="ngForm" novalidate>
+      <div *ngIf="f.submitted && !validLogin" class="warning">Incorrect email or password</div>
+      <div class="email">
+        <div *ngIf="f.submitted && !email.valid" class="warning">Email is required</div>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" [(ngModel)]="userData.email" #email="ngModel" required />
+      </div>
+      <div class="password">
+        <div *ngIf="f.submitted && !password.valid" class="warning">Password is required</div>
+        <label for="Password">Password</label>
+        <input type="password" name="password" [(ngModel)]="userData.password" #password="ngModel" required />
+      </div>
+      <div class="actions flex-row">
+        <a href="/" class="flex-center flex">Forgot password?</a>
+        <button type="submit" class="button-sm button-hvr">Sign In</button>
+      </div>
+    </form>
+    <div class="signin-links flex-col flex-center">
+      <a [routerLink]="['/pricing']">Create account</a>
+      <a>Sign in with company or school</a>
+      <a>Sign in with Digital-Tutors</a>
+    </div>
+  </div>
+  <div class="footer flex">
+    Copyright © 2004 - 2017 Pluralsight LLC. All rights reserved. |
+    <a href="/">Terms of Use</a> |
+    <a href="/">Privacy Policy</a>
+  </div>
+</full-window-container>
