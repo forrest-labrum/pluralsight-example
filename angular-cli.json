@@ -18,8 +18,8 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css",
-        "bootstrap-modal.css"
+        "bootstrap-modal.css",
+        "styles.css"
       ],
       "scripts": [],
       "environments": {
